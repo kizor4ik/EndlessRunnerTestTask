@@ -530,9 +530,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d07fafe17e39910408c7e662fe079a23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountOfThings: 20
+  amountOfThings: 40
   ammTilesOnScreen: 2
-  safeZone: 25
+  safeZone: 30
   playerTransform: {fileID: 0}
   tilePrefab: {fileID: 0}
   lines: []

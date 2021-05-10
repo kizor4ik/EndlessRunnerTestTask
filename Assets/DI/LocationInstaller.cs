@@ -19,9 +19,8 @@ namespace Common.Infrastracture
             BindObstaclesAndCookiesPrefabs();
             BindTiles();
             BindPlayer();
-
-            
         }
+
         private void BindUIview()
         {
             Container
@@ -29,6 +28,7 @@ namespace Common.Infrastracture
                 .FromInstance(_uiView)
                 .AsSingle();
         }
+
         private void BindPlayer()
         {
             Player player = Container
@@ -38,6 +38,7 @@ namespace Common.Infrastracture
                 .FromInstance(player)
                 .AsSingle();
         }
+
         private void BindObstaclesAndCookiesPrefabs()
         {
             Container
@@ -45,6 +46,7 @@ namespace Common.Infrastracture
                 .FromInstance(ObstaclesBoostsCookies)
                 .AsSingle();
         }
+
         private void BindLines()
         {
             Container
@@ -52,6 +54,7 @@ namespace Common.Infrastracture
                 .FromInstance(linesInGame)
                 .AsSingle();
         }
+
         private void BindTiles()
         {
             Container
