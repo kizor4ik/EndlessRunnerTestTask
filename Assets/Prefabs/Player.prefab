@@ -303,7 +303,11 @@ GameObject:
   - component: {fileID: 7093270654449292316}
   - component: {fileID: 7093270654449292317}
   - component: {fileID: 7093270654449292315}
-  - component: {fileID: 7093270654449292319}
+  - component: {fileID: -7130682475786450457}
+  - component: {fileID: -2845486893200817082}
+  - component: {fileID: -1691357753619274257}
+  - component: {fileID: 2035734875359391967}
+  - component: {fileID: 27391780960883009}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -355,8 +359,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a38012fd364314ca8ac3c828052ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiView: {fileID: 0}
---- !u!114 &7093270654449292319
+  Movement: {fileID: -7130682475786450457}
+--- !u!114 &-7130682475786450457
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -365,22 +369,61 @@ MonoBehaviour:
   m_GameObject: {fileID: 7093270654449292313}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39225195cefec4f418f689d8afffb86e, type: 3}
+  m_Script: {fileID: 11500000, guid: ce7835e9bde50e94da063c1294d280fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slowDownStep: 1
-  player: {fileID: 0}
-  initialSpeed: 20
-  speed: 20
-  maxSpeed: 200
-  jumpHeight: 3
-  duration: 0.5
-  isSpeedIncreased: 0
-  cubeBody: {fileID: 7093270655515037236}
-  lines:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  Parameters: {fileID: 0}
+  Speed: 0
+  IsSpeedIncreased: 0
+  CubeBody: {fileID: 7093270655515037236}
+--- !u!114 &-2845486893200817082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7093270654449292313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbb76db72bfaaa447bd44cdd7f82963e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-1691357753619274257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7093270654449292313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a8994646a54fa7479fa4a1af9738b9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2035734875359391967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7093270654449292313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 953c8f2ab80290545925428736cbcde3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &27391780960883009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7093270654449292313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acaf71b88408c7845964f104beec6b3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7093270655209860060
 GameObject:
   m_ObjectHideFlags: 0

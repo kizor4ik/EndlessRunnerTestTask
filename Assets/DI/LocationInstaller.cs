@@ -5,34 +5,43 @@ namespace Common.Infrastracture
 {
     public class LocationInstaller : MonoInstaller
     {
-        public UIview _uiView;
-        public Transform startPoint;
-        public GameObject playerPrefab;
-        public GameObject tile;
-        public GameObject[] ObstaclesBoostsCookies;
-        public Transform[] linesInGame;
+        public MovementParameters MovementSettings;
+        public WorldParameters WorldParameters;
+        public Transform StartPoint;
+        public GameObject PlayerPrefab;
+        public Tile Tile;
+        public InteractableObject[] ObstaclesBoostsCookies;
+        public RoadLine[] LinesInGame;
 
         public override void InstallBindings()
         {
+            BindMovementSettings();
+            BindEnvironmentSettings();
             BindLines();
-            BindUIview();
             BindObstaclesAndCookiesPrefabs();
             BindTiles();
             BindPlayer();
         }
 
-        private void BindUIview()
+        private void BindEnvironmentSettings()
         {
             Container
-                .Bind<UIview>()
-                .FromInstance(_uiView)
+                .Bind<WorldParameters>()
+                .FromInstance(WorldParameters)
+                .AsSingle();
+        }
+        private void BindMovementSettings()
+        {
+            Container
+                .Bind<MovementParameters>()
+                .FromInstance(MovementSettings)
                 .AsSingle();
         }
 
         private void BindPlayer()
         {
             Player player = Container
-                .InstantiatePrefabForComponent<Player>(playerPrefab, startPoint.position, Quaternion.identity, null);
+                .InstantiatePrefabForComponent<Player>(PlayerPrefab, StartPoint.position, Quaternion.identity, null);
             Container
                 .Bind<Player>()
                 .FromInstance(player)
@@ -42,7 +51,7 @@ namespace Common.Infrastracture
         private void BindObstaclesAndCookiesPrefabs()
         {
             Container
-                .Bind<GameObject[]>()
+                .Bind<InteractableObject[]>()
                 .FromInstance(ObstaclesBoostsCookies)
                 .AsSingle();
         }
@@ -50,16 +59,16 @@ namespace Common.Infrastracture
         private void BindLines()
         {
             Container
-                .Bind<Transform[]>()
-                .FromInstance(linesInGame)
+                .Bind<RoadLine[]>()
+                .FromInstance(LinesInGame)
                 .AsSingle();
         }
 
         private void BindTiles()
         {
             Container
-                .Bind<GameObject>()
-                .FromInstance(tile)
+                .Bind<Tile>()
+                .FromInstance(Tile)
                 .AsSingle();
         }
     }
